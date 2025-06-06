@@ -9,7 +9,7 @@
 
     <!-- Function buttons -->
     <button class="function" (click)="clear()">AC</button>
-    <button class="function" (click)="append('+/-')">+/-</button>
+    <button class="function" (click)="toggleSign()">+/-</button>
     <button class="function" (click)="append('%')">%</button>
     <button class="operator" (click)="append('/')">/</button>
 
@@ -29,8 +29,8 @@
     <button class="number" (click)="append('3')">3</button>
     <button class="operator" (click)="append('+')">+</button>
 
-    <!-- Function and number buttons -->
-    <button class="function" (click)="append('')">⌫</button>
+    <!-- Backspace button now calls backspace() -->
+    <button class="function" (click)="backspace()">⌫</button>
     <button class="number" (click)="append('0')">0</button>
     <button class="number" (click)="append('.')">.</button>
     <button class="operator" (click)="calculate()">=</button>

@@ -19,6 +19,24 @@ export class CalculatorComponent {
     this.input = '';
   }
 
+  toggleSign() {
+    if (this.input === '') {
+      // If input is empty, insert -1 * 
+      this.input = '-1*';
+    } else {
+      try {
+        const value = eval(this.input); // evaluate current input
+        this.input = (-value).toString(); // negate it
+      } catch {
+        this.input = 'Error';
+      }
+    }
+  }
+
+  backspace() {
+    this.input = this.input.slice(0, -1);
+  }
+
   calculate() {
     try {
       this.input = eval(this.input).toString();
