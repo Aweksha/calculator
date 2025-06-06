@@ -1,0 +1,39 @@
+<!-- Calculator container -->
+<div class="calculator">
+
+  <!-- Display for input -->
+  <input [(ngModel)]="input" readonly />
+
+  <!-- Button grid -->
+  <div class="buttons">
+
+    <!-- Function buttons -->
+    <button class="function" (click)="clear()">AC</button>
+    <button class="function" (click)="append('+/-')">+/-</button>
+    <button class="function" (click)="append('%')">%</button>
+    <button class="operator" (click)="append('/')">/</button>
+
+    <!-- Number buttons -->
+    <button class="number" (click)="append('7')">7</button>
+    <button class="number" (click)="append('8')">8</button>
+    <button class="number" (click)="append('9')">9</button>
+    <button class="operator" (click)="append('*')">*</button>
+
+    <button class="number" (click)="append('4')">4</button>
+    <button class="number" (click)="append('5')">5</button>
+    <button class="number" (click)="append('6')">6</button>
+    <button class="operator" (click)="append('-')">-</button>
+
+    <button class="number" (click)="append('1')">1</button>
+    <button class="number" (click)="append('2')">2</button>
+    <button class="number" (click)="append('3')">3</button>
+    <button class="operator" (click)="append('+')">+</button>
+
+    <!-- Function and number buttons -->
+    <button class="function" (click)="append('')">⌫</button>
+    <button class="number" (click)="append('0')">0</button>
+    <button class="number" (click)="append('.')">.</button>
+    <button class="operator" (click)="calculate()">=</button>
+
+  </div>
+</div>

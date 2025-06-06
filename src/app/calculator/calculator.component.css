@@ -1,0 +1,76 @@
+/* Set background for the whole page */
+body {
+  background-color: #fce4ec;
+}
+
+/* Style for the calculator container */
+.calculator {
+  width: 320px;
+  margin: 50px auto;
+  padding: 20px 20px 10px 20px;
+  border: 2px solid #f8bbd0;
+  border-radius: 15px;
+  background-color: #fff0f5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the display (input box) */
+.calculator input {
+  width: calc(100% - 10px); /* adjust width to account for margin */
+  height: 60px;
+  font-size: 32px;
+  text-align: right;
+  margin: 0 5px 20px 5px; /* small side margins, same bottom margin */
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Layout grid for buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Base button style */
+button {
+  height: 60px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Number button style */
+button.number {
+  background-color: #e1bee7;
+  color: #333;
+}
+
+button.number:hover {
+  background-color: #d1c4e9;
+}
+
+/* Operator button style */
+button.operator {
+  background-color: #ffccbc;
+  color: #333;
+}
+
+button.operator:hover {
+  background-color: #ffab91;
+}
+
+/* Function button style */
+button.function {
+  background-color: #b2dfdb;
+  color: #333;
+}
+
+button.function:hover {
+  background-color: #80cbc4;
+}
